@@ -6,13 +6,13 @@ An interactive reading service that parses text using book photos and leaves not
 ## How to run project
 ### Install
 ```
-$ git clone 
+$ git clone https://github.com/di-uni/bookinspire.git
 $ minikube start
 $ docker build -f Dokerfile -t bookgam .
 $ kubectl create -f k8s/
 $ ngrok http 30001
 ```  
-Open ngrok ~~
+Open ngrok link in browser to access this program.
 
 ## Detailed description
 ### How to Use 
@@ -26,7 +26,7 @@ Open ngrok ~~
 ## Technology stack
 This project consists of a flask-based backend and an html + css frontend.
 
-- flask : flasktest.py(main program), parser.py(ocr data parse program)
+- flask : main_server.py(main program), parser.py(ocr data parse program)
    - Implementation of pagination, image source storage, and user data storage through sessions
 
 - html, css: home.html, login.html etc (using with flask)
@@ -44,7 +44,7 @@ This project consists of a flask-based backend and an html + css frontend.
 
 ## Structures
 
-- flaktest.py: Act as main server
+- main_server.py: Main server that communicate other servers and client
 - ocr_request.py: Receive data by communicating with Naver API
 - parser.py: Parses the data received from Naver API and sends the desired text
   
