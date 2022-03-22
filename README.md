@@ -1,8 +1,20 @@
+# 책영감
 ## Brief overview
 
-An interactive reading service that parses text using book photos and leaves notes with notes 
+Interactive Reading에 도움을 주는 서비스, 책영감.   
+<책영감>은 책 읽을 때 오래 기억하고 싶은 부분을 남기기 위해 책 속 구절 사진을 찍으면 메모처럼 저장되는 앱입니다.    
+업로드 된 책 이미지 속의 텍스트를 인식한 후 사용자가 입력한 간단한 메모, 감상, 날짜 등과 함께 독서노트에 기록됩니다.   
 
 ![18](https://user-images.githubusercontent.com/50884017/159531151-9bdf093c-6b4a-47e3-ab54-f352c67574f2.png)
+
+책영감은 왜 필요할까요?    
+적극적인 독서 활동은 독서 능률을 증진시킵니다.   
+또한 많은 사용자들이 다양한 독서 서비스 어플들을 사용하고 있는데요, 이는 interactive reading에 대한 수요층이 굉장히 많다는 것을 의미하기도 합니다.    
+하지만, 관련 앱의 리뷰를 보면 사진 '업로드에 시간이 너무 많이 걸린다.', '데이터 사용량이 너무 많다.', '로그인 기능이 없다.' 라는 피드백이 많았습니다.   
+
+그래서 책영감은 기존 서비스와 차별성을 두기위해 OCR기능을 추가했습니다.    
+이미지가 아닌 텍스트로 저장함으로써 데이터 소모를 줄일 뿐 아니라, 사용자가 원하는 부분만 편집하여 저장할 수 있게 하였습니다.     
+로그인 기능도 제공하여 사용자 개개인의 데이터를 로그인만 하면 어디서든 확인할 수 있게 하였습니다.     
 
 
 <br/><br/>
@@ -23,13 +35,13 @@ Open ngrok link in browser to access this program.
 ## Detailed description
 
 ### 1) Home / Login / Register
-- Home
+- **Home**
 	- 홈 페이지에서는 로그인(또는 회원가입 후 로그인)을 하면 그동안 작성한 책 감상문을 보거나 새로운 감상문을 작성할 수 있습니다. 
 	- There is a path where you can log in, register, read data, and write data.
-- Login
+- **Login**
 	- 아이디와 비밀번호를 통해 로그인을 할 수 있습니다. 
 	- Users can login with ID and password.
-- Register
+- **Register**
  	- 회원가입을 위해서는 닉네임, ID, 그리고 비밀번호와 같은 정보가 필요합니다.
 	- To register, nickname, ID, and password are required.   
 
@@ -39,10 +51,10 @@ Open ngrok link in browser to access this program.
 <br/>
 
 ### 2) Write the book report      
-- Image upload
+- **Image upload**
 	- 책 이미지를 업로드하면, ocr 과정을 거쳐 이미지 속 텍스트를 추출할 수 있습니다.
 	- To get the paragraphs of the book, upload the image of the book and wait for ocr.   
-- Write
+- **Write**
 	- 독서 감상문을 완성하기 위해 책 제목, 작가, 읽은 날짜, 페이지, 그리고 자신의 생각을 입력합니다.
 	- 등록하기를 누르면, 홈으로 돌아가고, 홈에서는 추가된 독서 감상문을 확인할 수 있습니다.
 	- Write book title, author, read date, page and your own thought to complete the book report.
@@ -54,27 +66,27 @@ Open ngrok link in browser to access this program.
 ## Technology stack
 ![10](https://user-images.githubusercontent.com/50884017/159532279-94997e51-ad7e-4c24-97c2-8c8827cbb899.png)
 
-This project consists of a flask-based backend and an html + css frontend.
+flask-based backend and an html + css frontend.
 
-- flask : main_server.py(main program), parser.py(ocr data parse program)
+- **flask** : main_server.py(main program), parser.py(ocr data parse program)
    - Implementation of pagination
    - Image source storage
    - User data storage through sessions
 
-- html, css: home.html, login.html etc (using with flask)
+- **html, css**: home.html, login.html etc (using with flask)
    - responsive UI (with flex)
    - able to use in web and mobile
    - customize various components
 
-- http, grpc: Protocol used for communication between programs
+- **http, grpc**: Protocol used for communication between programs
 
-- ngrok : program that allows external access to a specific port on the server.
+- **ngrok** : program that allows external access to a specific port on the server.
 
-- redis : user database
+- **redis** : user database
 
-- Naver OCR : Process the image source saved by the user to extract text
+- **Naver OCR** : Process the image source saved by the user to extract text
 
-- Docker + k8s : To provide containers and its orchestration for microarchitecture services  
+- **Docker + k8s** : To provide containers and its orchestration for microarchitecture services  
   
 ![13](https://user-images.githubusercontent.com/50884017/159532400-e299eac1-d38d-4bbd-8fcd-c3b395b34ba6.png)
 
