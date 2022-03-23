@@ -102,10 +102,12 @@ flask-based backend and an html + css frontend.
 <br/><br/>
 
 ## Responsive web
-Demo in mobile
+PC뿐만 아니라 모바일에서도 책영감을 이용할 수 있습니다.   
+<br/>
+### Demo in mobile
 
-<img width="200" alt="회원가입" src="https://user-images.githubusercontent.com/50884017/159539010-b40aac15-d6f8-4e53-a6d3-d15bf4fd69bb.gif"> <img width="200" alt="로그인" src="https://user-images.githubusercontent.com/50884017/159539297-2406c6cd-2055-4c33-8f15-10c019db9eab.gif"> <img width="200" alt="작성" src="https://user-images.githubusercontent.com/50884017/159539582-b97ac125-aeb6-4b04-81ce-d3249540b4f8.gif">
-
+<img width="200" alt="회원가입" src="https://user-images.githubusercontent.com/50884017/159539010-b40aac15-d6f8-4e53-a6d3-d15bf4fd69bb.gif"> <img width="200" alt="로그인" src="https://user-images.githubusercontent.com/50884017/159539297-2406c6cd-2055-4c33-8f15-10c019db9eab.gif"> <img width="200" alt="작성" src="https://user-images.githubusercontent.com/50884017/159539582-b97ac125-aeb6-4b04-81ce-d3249540b4f8.gif">    
+회원가입 / 로그인 / 작성하기
 
 <br/><br/>
 
